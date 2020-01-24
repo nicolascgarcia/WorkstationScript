@@ -3,4 +3,4 @@ Script de automatização de instalações de softwares que utilizo para o OS De
 
 Para utilizar o Script, basta rodar o comando:
 
-sudo ./workStationScript.sh
+sudo ./my-workstation.sh
