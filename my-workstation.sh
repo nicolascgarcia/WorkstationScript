@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ## Removendo travas eventuais do apt ##
 
 sudo rm /var/lib/dpkg/lock-frontend
@@ -7,7 +5,7 @@ sudo rm /var/cache/apt/archives/lock
 
 ## Atualizando o repositório ##
 
-sudo apt update -y &&
+sudo apt update &&
 
 ## Entrando em Downloads ##
 
@@ -15,21 +13,79 @@ cd /home/$USER/Downloads/ &&
 
 ## baixando e instalando Chrome ##
 
-wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
 
-apt install ./google-chrome-stable_current_amd64.deb -y &&
+sudo apt install ./google-chrome-stable_current_amd64.deb &&
 
-## Instalando Dropbox e Git ##
+## baixando e instalando FileZilla ##
 
-apt install nautilus-dropbox git -y &&
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu $(lsb_release -cs)-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list' &&
 
-## Instalando Visual Code e Insomnia ##
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add - &&
 
-sudo apt install snapd -y &&
+sudo apt-get update &&
 
-sudo snap install code --classic -y &&  
-sudo snap install insomnia -y &&  
-sudo snap install photogimp -y &&
+sudo apt-get install filezilla &&
+
+## Instalando Postman ##
+
+sudo apt-get install snapd snapd-xdg-open &&
+
+snap install postman &&
+
+## Instalando Skype ##
+
+echo "deb [arch=amd64] https://repo.skype.com/deb stable main" | sudo tee /etc/apt/sources.list.d/skype-stable.list &&
+
+wget https://repo.skype.com/data/SKYPE-GPG-KEY &&
+
+sudo apt-key add SKYPE-GPG-KEY &&
+
+sudo apt install apt-transport-https &&
+
+sudo apt update &&
+
+sudo apt install skypeforlinux &&
+
+## Instalando Visual Code ##
+
+sudo snap install --classic vscode &&
+
+## Instalando Git ##
+
+sudo apt install git &&
+
+## Instalando Node.JS ##
+
+sudo apt update &&
+
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - &&
+
+sudo apt-get install -y nodejs &&
+
+## Instalando Apache ##
+
+sudo apt update &&
+
+sudo apt install apache2 &&
+
+sudo ufw app list &&
+
+sudo ufw app info "Apache Full" &&
+
+sudo ufw allow in "Apache Full" &&
+
+## Instalando MySQL ##
+
+sudo apt update &&
+
+sudo apt install mysql-server &&
+
+sudo mysql_secure_installation &&
+
+## Instalando PHP ##
+
+sudo apt update &&
 
 ## finalizando o processo ##
 
