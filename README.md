@@ -14,6 +14,6 @@ Softwares a serem instalados pelo script:
     - MySQL;
     - PHP 7.4;
 
-Para utilizar o Script, basta rodar o comando:
+Para utilizar o Script, acesse o terminal na pasta Downloads e execute o comando:
 
 sudo ./my-workstation.sh
