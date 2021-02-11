@@ -18,6 +18,9 @@ Softwares a serem instalados pelo script:
     - Spotify;
     - Discord;
     - React native;
+    - Docker (ES and MongoDB);
+    - Yarn;
+        
     
 Para utilizar o Script, acesse o terminal na pasta Downloads e execute o comando:
 
