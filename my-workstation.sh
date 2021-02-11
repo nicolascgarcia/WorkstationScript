@@ -5,7 +5,7 @@ sudo rm /var/cache/apt/archives/lock
 
 ## Atualizando o repositório ##
 
-## sudo apt update && ##
+sudo apt update && 
 
 ## baixando e instalando Chrome ##
 
@@ -14,6 +14,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &
 sudo apt install ./google-chrome-stable_current_amd64.deb && 
 
 ## baixando e instalando FileZilla ##
+
+sudo add-apt-repository ppa:n-muench/programs-ppa
 
 sudo apt-get install filezilla &&
 
