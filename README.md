@@ -13,7 +13,12 @@ Softwares a serem instalados pelo script:
     - Apache;
     - MySQL;
     - PHP 7.4;
-
+    - Terminator;
+    - Slack;
+    - Spotify;
+    - Discord;
+    - React native;
+    
 Para utilizar o Script, acesse o terminal na pasta Downloads e execute o comando:
 
 sudo ./my-workstation.sh
